@@ -3,5 +3,5 @@ open module javafx.template.main {
     requires javafx.controls;
     requires gl.javafx;
     
-    exports template;
+    exports entrance;
 }

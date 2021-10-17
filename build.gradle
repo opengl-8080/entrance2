@@ -9,7 +9,7 @@ javafx {
     modules = [ 'javafx.fxml', 'javafx.controls' ]
 }
 
-mainClassName = 'template.Main'
+mainClassName = 'entrance.Main'
 
 sourceCompatibility = 17
 targetCompatibility = 17

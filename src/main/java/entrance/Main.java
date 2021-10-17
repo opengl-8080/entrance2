@@ -1,10 +1,10 @@
-package template;
+package entrance;
 
 import gl.javafx.FxWindow;
 import gl.javafx.Fxml;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import template.controller.MainController;
+import entrance.controller.MainController;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         final Fxml<?, ?> fxml = Fxml.load(MainController.class);
         FxWindow.newWindow(fxml)
-                .title("Template")
+                .title("Entrance")
                 .show(primaryStage);
     }
 }

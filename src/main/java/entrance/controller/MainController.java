@@ -1,4 +1,4 @@
-package template.controller;
+package entrance.controller;
 
 import gl.javafx.FxmlPath;
 import gl.javafx.control.Dialog;
