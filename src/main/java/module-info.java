@@ -1,7 +1,9 @@
 open module javafx.template.main {
+    exports entrance;
+
     requires javafx.fxml;
     requires javafx.controls;
     requires gl.javafx;
-    
-    exports entrance;
+    requires java.sql;
+    requires org.apache.logging.log4j;
 }

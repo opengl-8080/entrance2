@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="home">${env:ENTRANCE_HOME:-~/.entrance2}</Property>
+        <Property name="logDir">${home}/log</Property>
+        <Property name="logLayout">[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5p] [%t] [%c] ${logDir} %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="${logLayout}" />
+        </Console>
+        <RollingFile name="ROLLING" fileName="${logDir}/entrance2.log" filePattern="${logDir}/entrance2-%d{yyyy-MM-dd}-%i.zip">
+            <PatternLayout pattern="${logLayout}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="20MB" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="ROLLING"/>
+        </Root>
+    </Loggers>
+</Configuration>
