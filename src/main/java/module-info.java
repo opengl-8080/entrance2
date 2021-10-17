@@ -6,4 +6,6 @@ open module javafx.template.main {
     requires gl.javafx;
     requires java.sql;
     requires org.apache.logging.log4j;
+    requires org.flywaydb.core;
+    requires com.h2database;
 }
